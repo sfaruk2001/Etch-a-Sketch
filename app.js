@@ -4,7 +4,7 @@ const body = document.querySelector("body");
 
 gridButton.addEventListener("click", function() {
     let size = prompt("What size do you want the grid to be?",16);
-    
+    container.innerHTML = "";
     
     createGrid(size);
 });
@@ -20,8 +20,8 @@ function createGrid(size) {
         row.style.display = "flex";
         for (let j = 0; j < size; j++) {
             let square = document.createElement("div");
-            square.style.height = "30px";
-            square.style.width = "30px";
+            square.style.height = "10px";
+            square.style.width = "10px";
             square.style.border = "black 1px solid";
             square.classList.add("cell");
             square.addEventListener('mouseover', colorCell);
